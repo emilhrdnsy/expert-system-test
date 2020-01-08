@@ -1,18 +1,30 @@
-import React from 'react';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import React from 'react'
+import clsx from 'clsx'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
+import StyleTreeItem from './TreeItemComp'
 
 import {
-  Drawer, AppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ListItem, ListItemIcon, ListItemText
+  Drawer,
+  AppBar,
+  Toolbar,
+  List,
+  CssBaseline,
+  Typography,
+  Divider,
+  IconButton,
+  ListItem,
+  ListItemIcon,
+  ListItemText
 }
-  from '@material-ui/core';
+  from '@material-ui/core'
 
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MenuIcon from '@material-ui/icons/Menu'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import DashboardIcon from '@material-ui/icons/Dashboard'
+import InputIcon from '@material-ui/icons/Input'
 
-import indigo from '@material-ui/core/colors/indigo';
+import indigo from '@material-ui/core/colors/indigo'
 
 
 const drawerWidth = 230;
@@ -140,12 +152,12 @@ export default function DrawerComp() {
         <Divider />
         <List>
           <ListItem button>
-            <ListItemIcon style={{ color: indigo[500] }}><InboxIcon /></ListItemIcon>
-            <ListItemText style={{ color: indigo[500] }} primary='Beranda' />
+            <ListItemIcon style={{ color: indigo[500] }}><DashboardIcon /></ListItemIcon>
+            <ListItemText style={{ color: indigo[500] }} primary='Dashboard' />
           </ListItem>
           <ListItem button>
-            <ListItemIcon style={{ color: indigo[500] }}><InboxIcon /></ListItemIcon>
-            <ListItemText style={{ color: indigo[500] }} primary='Beranda' />
+            <ListItemIcon style={{ color: indigo[500] }}><InputIcon /></ListItemIcon>
+            <ListItemText style={{ color: indigo[500] }} primary='Input' />
           </ListItem>
         </List>
       </Drawer>
