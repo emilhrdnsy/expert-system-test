@@ -3,21 +3,19 @@ import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 import {
-  Drawer, AppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton
+  Drawer, AppBar, Toolbar, List, CssBaseline, Typography, Divider, IconButton, ListItem, ListItemIcon, ListItemText
 }
   from '@material-ui/core';
 
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+
+import indigo from '@material-ui/core/colors/indigo';
 
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -62,9 +60,9 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing(7) + 1,
+    width: theme.spacing(6) + 1,
     [theme.breakpoints.up('sm')]: {
-      width: theme.spacing(9) + 1,
+      width: theme.spacing(7) + 1,
     },
   },
   toolbar: {
@@ -132,6 +130,7 @@ export default function DrawerComp() {
             [classes.drawerClose]: !open,
           }),
         }}
+        style={{ backgroundColor: indigo[500] }}
       >
         <div className={classes.toolbar}>
           <IconButton onClick={handleDrawerClose}>
@@ -141,12 +140,12 @@ export default function DrawerComp() {
         <Divider />
         <List>
           <ListItem button>
-            <ListItemIcon><InboxIcon /></ListItemIcon>
-            <ListItemText primary='Beranda' />
+            <ListItemIcon style={{ color: indigo[500] }}><InboxIcon /></ListItemIcon>
+            <ListItemText style={{ color: indigo[500] }} primary='Beranda' />
           </ListItem>
           <ListItem button>
-            <ListItemIcon><InboxIcon /></ListItemIcon>
-            <ListItemText primary='Beranda' />
+            <ListItemIcon style={{ color: indigo[500] }}><InboxIcon /></ListItemIcon>
+            <ListItemText style={{ color: indigo[500] }} primary='Beranda' />
           </ListItem>
         </List>
       </Drawer>
