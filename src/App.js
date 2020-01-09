@@ -1,11 +1,11 @@
 import React from 'react';
-import DrawerComp from './Components/DrawerComp'
+import ResponsiveDrawer from './Components/ResponsiveDrawerComp';
 
 
 function App() {
   return (
     <div>
-      <DrawerComp />
+      <ResponsiveDrawer />
     </div>
   );
 }
