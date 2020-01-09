@@ -4,15 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import TreeItem from '@material-ui/lab/TreeItem';
 import Typography from '@material-ui/core/Typography';
-import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+
 import InfoIcon from '@material-ui/icons/Info';
 import ForumIcon from '@material-ui/icons/Forum';
 import LocalOfferIcon from '@material-ui/icons/LocalOffer';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import InputIcon from '@material-ui/icons/Input';
+import DashboardRoundedIcon from '@material-ui/icons/DashboardRounded';
+import InputRoundedIcon from '@material-ui/icons/InputRounded';
+import StorageRoundedIcon from '@material-ui/icons/StorageRounded';
+import SupervisorAccountRoundedIcon from '@material-ui/icons/SupervisorAccountRounded';
+import CachedRoundedIcon from '@material-ui/icons/CachedRounded';
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -106,6 +108,7 @@ const useStyles = makeStyles({
   },
 });
 
+
 export default function GmailTreeView() {
   const classes = useStyles();
 
@@ -117,38 +120,55 @@ export default function GmailTreeView() {
       defaultExpandIcon={<ArrowRightIcon />}
       defaultEndIcon={<div style={{ width: 24 }} />}
     >
-      <StyledTreeItem nodeId="1" labelText="Dashboard" labelIcon={DashboardIcon} />
-      <StyledTreeItem nodeId="2" labelText="Input" labelIcon={InputIcon}>
+      <StyledTreeItem nodeId="1" labelText="Dashboard" labelIcon={DashboardRoundedIcon} color="#1a73e8" bgColor="#e8f0fe"/>
+      <StyledTreeItem nodeId="2" labelText="Input" labelIcon={InputRoundedIcon} color="#1a73e8" bgColor="#e8f0fe">
         <StyledTreeItem
-          nodeId="5"
-          labelText="Social"
-          labelIcon={SupervisorAccountIcon}
+          nodeId="6"
+          labelText="Input Gejala"
+          labelIcon={SupervisorAccountRoundedIcon}
           color="#1a73e8"
           bgColor="#e8f0fe"
         />
         <StyledTreeItem
-          nodeId="6"
-          labelText="Updates"
-          labelIcon={InfoIcon}
-          color="#e3742f"
-          bgColor="#fcefe3"
-        />
-        <StyledTreeItem
           nodeId="7"
-          labelText="Forums"
-          labelIcon={ForumIcon}
-          color="#a250f5"
-          bgColor="#f3e8fd"
+          labelText="Input Variabel Gejala"
+          labelIcon={InfoIcon}
+          color="#1a73e8"
+          bgColor="#e8f0fe"
         />
         <StyledTreeItem
           nodeId="8"
-          labelText="Promotions"
+          labelText="Input Variable Ciri-ciri"
+          labelIcon={ForumIcon}
+          color="#1a73e8"
+          bgColor="#e8f0fe"
+        />
+        <StyledTreeItem
+          nodeId="9"
+          labelText="Input Rule Penyakit"
           labelIcon={LocalOfferIcon}
-          color="#3c8039"
-          bgColor="#e6f4ea"
+          color="#1a73e8"
+          bgColor="#e8f0fe"
         />
       </StyledTreeItem>
-      <StyledTreeItem nodeId="4" labelText="Konsultasi" labelIcon={SupervisorAccountIcon} />
+      <StyledTreeItem nodeId="3" labelText="Data Gejala" labelIcon={StorageRoundedIcon} color="#1a73e8" bgColor="#e8f0fe" />
+      <StyledTreeItem nodeId="4" labelText="Proses" labelIcon={CachedRoundedIcon} color="#1a73e8" bgColor="#e8f0fe">
+        <StyledTreeItem
+          nodeId="10"
+          labelText="Data User"
+          labelIcon={SupervisorAccountRoundedIcon}
+          color="#1a73e8"
+          bgColor="#e8f0fe"
+        />
+        <StyledTreeItem
+          nodeId="11"
+          labelText="Hasil Diagnosa"
+          labelIcon={InfoIcon}
+          color="#1a73e8"
+          bgColor="#e8f0fe"
+        />
+      </StyledTreeItem>
+      <StyledTreeItem nodeId="5" labelText="Konsultasi" labelIcon={SupervisorAccountRoundedIcon} color="#1a73e8" bgColor="#e8f0fe" />
     </TreeView>
   );
 }
